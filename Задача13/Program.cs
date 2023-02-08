@@ -27,5 +27,6 @@ if (num > 999)
         num = num / 10;
     }
     int result = num % 10;
+    Console.Write(result);
 }
-Console.Write(result);
+//Console.Write(result);
