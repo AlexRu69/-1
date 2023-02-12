@@ -11,11 +11,23 @@ int a = int.Parse(Console.ReadLine()!);
 Console.Write("Введите второе число ");
 int b = int.Parse(Console.ReadLine()!);
 
-if (a > b)
+// if (a > b)
+// {
+//     Console.WriteLine($"{a }");
+// }
+// else
+// {
+//     Console.WriteLine($"{b }");
+// }
+
+void GetMax(int A, int B)
 {
-    Console.WriteLine($"{a }");
+    int max = A;
+    if(B > max)
+    {
+        max = B;
+    }
+    Console.Write(max);
 }
-else
-{
-    Console.WriteLine($"{b }");
-}
+
+GetMax(a, b);
