@@ -7,11 +7,11 @@
 Console.Clear();
 
 Console.Write("Введите первое число ");
-int number1 = int.Parse(Console.ReadLine()!);
+int num1 = int.Parse(Console.ReadLine()!);
 Console.Write("Введите второе число ");
-int number2 = int.Parse(Console.ReadLine()!);
+int num2 = int.Parse(Console.ReadLine()!);
 Console.Write("Введите третье число ");
-int number3 = int.Parse(Console.ReadLine()!);
+int num3 = int.Parse(Console.ReadLine()!);
 
 int max = number1;
 
@@ -25,3 +25,21 @@ if (number2 < number3)
 }
 
 Console.WriteLine($"{max }");
+
+// void GetMax(int a, int b, int c)    Не получается создать метод сортировки пузырьком
+// {
+//     int[] array = new int[3];
+//     int max = 0;
+//     for (int i = 0; i < 2; i++)
+//     {
+//         if (array[i] > array[i + 1])
+//         {
+//             max = array[i];
+//             array[i] = array[i + 1];
+//             array[i + 1] = max;
+//         }
+//         Console.Write(max);
+//     }
+// }
+// GetMax(num1, num2, num3);
+
