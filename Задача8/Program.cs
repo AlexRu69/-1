@@ -8,11 +8,13 @@ Console.Clear();
 
 Console.Write("Введите число ");
 int N = int.Parse(Console.ReadLine()!);
-
-int A = 2;
-
-while (A <= N)
+void xxx(int n)
 {
-    Console.WriteLine($"{A }");
-    A = A + 2;
+    int A = 2;
+    while (A <= N)
+    {
+        Console.Write($"{A} ");
+        A = A + 2;
+    }
 }
+xxx(N);
