@@ -21,16 +21,8 @@ int Exponentiation(int A, int B)    //Метот принимает на вхо�
     }
     return sum;
 }
-// int Input(int A, int B)         Метод ввода
-// {
-//     Console.Write("Введите первое число: ");
-//     int num1 = int.Parse(Console.ReadLine()!);
-//     Console.Write("Введите второе число: ");
-//     int num2 = int.Parse(Console.ReadLine()!);
-//     return num1;
-//     return num2;
-// }
 
-//Input(num1, num2);
+
+
 Console.Write(Exponentiation(num1, num2));
 
