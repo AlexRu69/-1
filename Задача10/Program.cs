@@ -10,6 +10,13 @@ Console.Clear();
 Console.Write("Введите трёхзначное число: ");
 int num = int.Parse(Console.ReadLine()!);
 
-int a = num % 100;
-int b = a / 10;
-Console.Write(b);
+// int a = num % 100;
+// int b = a / 10;
+// Console.Write(b);
+
+int xxx(int n)
+{
+    int a = (n /10) % 10;
+    return a;
+}
+Console.Write(xxx(num));
