@@ -21,3 +21,6 @@ if (num >= 6 && num <= 7)
     Console.Write($"{num} -> yes");
 }
 
+
+
+
