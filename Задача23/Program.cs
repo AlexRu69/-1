@@ -11,7 +11,7 @@ double N = double.Parse(Console.ReadLine()!);
 double count = 1;
 while (count <= N)
 {
-                                   //2
+
     Console.Write($"{Math.Pow(count, 3)}");
     if (count != N)
     {
