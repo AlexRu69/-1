@@ -22,4 +22,4 @@ double A = Math.Pow(x1 - x0, 2) + Math.Pow(y1 - y0, 2) + Math.Pow(z1 - z0, 2);
 
 double result = Math.Sqrt(A);
 
-Console.WriteLine($"{result:f2}");
+Console.WriteLine($"{result:f2}");   //f2 оставляет 2 знака после запятой
