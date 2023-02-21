@@ -5,34 +5,29 @@
 
 Console.Clear();
 
+System.Console.WriteLine("Введите числа через пробел: ");
+string[] input = Console.ReadLine().Split();     //Получаем ввод с клавиатуры сразу в массив string
+System.Console.WriteLine(string.Join(" ", input));
+System.Console.WriteLine(CountPositive(ConvertStringToInt(input)));
 
 
 
-int[] GetArray(string num)     // Метод создания массива через ручной ввод(Строку)
+int[] ConvertStringToInt(string[] Array)
 {
-    int[] array = new int[num.Length];
-    for (int i = 0; i < num.Length; i++)
+    int[] intArryay = new int[Array.Length];
+    for (int i = 0; i < Array.Length; i++)
     {
-        array[i] = num[i];
+        intArryay[i] = int.Parse(Array[i]);    //Поэлиментно преобразовываем string в unt и записываем в новый массив
     }
-    return array;
+    return intArryay;
 }
 
-
-
-int GetSum(int[] array)
+int CountPositive(int[] numbers)
 {
-    int[] numbers = new int[array.Length];
     int count = 0;
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < numbers.Length; i++)
     {
-        if(numbers[i] > 0) count++;
-        
+        if (numbers[i] > 0) count++;     // Считаем кол-во чисел больше нуля
     }
     return count;
 }
-
- Console.Write("Введите числа через запятую: ");
- string numbers = Console.ReadLine();
- int[] Array = GetArray(numbers);
- Console.Write(GetSum(Array)!);
