@@ -15,8 +15,8 @@ double k2 = double.Parse(Console.ReadLine()!);
 
 double GetX(double a, double b, double c, double d)
 {
-    double x;
-    return x = (c - a) / (b - d);
+    double x;                                    // y = k1 * x + b1, y = k2 * x + b2          
+    return x = (c - a) / (b - d);                // k1 * x + b1 = k2 * x + b2 / (k1 - k2)*x = b2 - b1 / x =b2 - b1/k1 - k2
 }
 
 double GetY(double i, double f, double x)
