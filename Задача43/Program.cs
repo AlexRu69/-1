@@ -5,24 +5,24 @@
 Console.Clear();
 
 System.Console.Write("Ведите координату b1: ");
-int b1 = int.Parse(Console.ReadLine()!);
+double b1 = double.Parse(Console.ReadLine()!);
 System.Console.Write("Ведите координату k1: ");
-int k1 = int.Parse(Console.ReadLine()!);
+double k1 = double.Parse(Console.ReadLine()!);
 System.Console.Write("Ведите координату b2: ");
-int b2 = int.Parse(Console.ReadLine()!);
+double b2 = double.Parse(Console.ReadLine()!);
 System.Console.Write("Ведите координату k2: ");
-int k2 = int.Parse(Console.ReadLine()!);
+double k2 = double.Parse(Console.ReadLine()!);
 
-double GetX(int a, int b, int c, int d)
+double GetX(double a, double b, double c, double d)
 {
     double x;
     return x = (c - a) / (b - d);
 }
 
-double GetY(int i, int f, double x)
+double GetY(double i, double f, double x)
 {
     double y;
-    return y = i * x - f;
+    return y = i * x + f;
 }
 
 System.Console.WriteLine($"x = {GetX(b1, k1, b2, k2)}");
