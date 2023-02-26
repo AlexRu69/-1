@@ -1,31 +1,30 @@
-﻿// Задача 47. Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
-
-// m = 3, n = 4.
-
-// 0,5 7 -2 -0,2
-
-// 1 -3,3 8 -9,9
-
-// 8 7,8 -7,1 9
-
+﻿// Задача 50: Напишите программу, которая на вход
+// принимает позиции элемента в двумерном массиве, и
+// возвращает значение этого элемента или же указание,
+// что такого элемента нет.
+// Например, задан массив:
+// 1 4 7 2
+// 5 9 2 3
+// 8 4 2 4
+// 17 -> такого числа в массиве нет
 
 
 Console.Clear();
 
-double[,] GetArray2D(int a, int b, double minVolue, double maxVolue)
+int[,] GetArray2D(int a, int b, int minVolue, int maxVolue)
 {
-    double[,] array = new double[a, b];
+    int[,] array = new int[a, b];
     for (int i = 0; i < a; i++)
     {
         for (int j = 0; j < b; j++)
         {
-            array[i, j] = new Random().NextDouble() * (maxVolue - minVolue) - minVolue;
+            array[i, j] = new Random().Next(minVolue, maxVolue + 1);
         }
     }
     return array;
 }
 
-void PrintAraay2D(double[,] array)
+void PrintAraay2D(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -37,10 +36,28 @@ void PrintAraay2D(double[,] array)
     }
 }
 
-System.Console.WriteLine("Введите кол-во строк: ");
+void ShowCellContents(int[,] array, int a, int b)
+{
+
+    if (a > array.GetLength(0) || b > array.GetLength(1))
+        System.Console.WriteLine("Такого элемента нет!");
+    else
+    {
+        System.Console.WriteLine($"На этой позиции находится число {array[a, b]}");
+    }
+}
+
+
+System.Console.Write("Введите кол-во строк: ");
 int line = int.Parse(Console.ReadLine()!);
-System.Console.WriteLine("Введите кол-во столбцов: ");
+System.Console.Write("Введите кол-во столбцов: ");
 int col = int.Parse(Console.ReadLine()!);
-double[,] newArray = (GetArray2D(line, col, 1, 9));
+System.Console.Write("Введите номер строки: ");
+int numLine = int.Parse(Console.ReadLine()!);
+System.Console.Write("Введите номер столбца: ");
+int numCol = int.Parse(Console.ReadLine()!);
+int[,] newArray = (GetArray2D(line, col, 0, 9));
+System.Console.WriteLine();
 PrintAraay2D(newArray);
 System.Console.WriteLine();
+ShowCellContents(newArray, numLine, numCol);

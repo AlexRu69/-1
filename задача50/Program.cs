@@ -38,16 +38,12 @@ void PrintAraay2D(int[,] array)
 
 void ShowCellContents(int[,] array, int a, int b)
 {
-    
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            if (i == a && j == b) System.Console.WriteLine(array[i, j]);
-           
-            
-        }
 
+    if (a > array.GetLength(0) || b > array.GetLength(1))
+        System.Console.WriteLine("Такого элемента нет!");
+    else
+    {
+        System.Console.WriteLine($"На этой позиции находится число {array[a, b]}");
     }
 }
 
