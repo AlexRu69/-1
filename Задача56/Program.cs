@@ -28,25 +28,21 @@ void PrintAraay2D(int[,] array)
     }
 }
 
-void GetSum(int[,] array)
+void GetSum(int[,] matrix)  
 {
-    int[] result = new int[array.GetLength(0)];
-    
-    for (int i = 0; i < array.GetLength(0); i++)
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        int index = 0;
-        
-        for (int j = 0; j < array.GetLength(1); j++)
+        double sum = 0;
+        double average = 0;
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            int res = array[i,j];
-            res = res + array[i,j];
-            result[index++] = res;
+            sum = sum + matrix[i, j];
         }
+        average = sum;
+        System.Console.WriteLine($"столбец {i}: {average}");
     }
-    return result;
 }
 
-int[,] newAArray = GetArray2D(5, 5, 1, 3);
+int[,] newAArray = GetArray2D(3, 3, 1, 3);
 PrintAraay2D(newAArray);
-int[] sumString = GetSum(newAArray);
-System.Console.WriteLine(string.Join(", ", sumString));
+GetSum(newAArray);
