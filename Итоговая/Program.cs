@@ -4,7 +4,7 @@
 
 Console.Clear();
 
-string[] originalArray = { "hello", "123", "string", "5", ",.&", "homework" };
+string[] originalArray = { "hello", "123", "string", "hed", "5", "!.&", "homework" };
 
 
 
@@ -13,7 +13,7 @@ string[] GetNewArray(string[] array)
     int size = 0;
     for (int j = 0; j < array.Length; j++)
     {
-        if(array[j].Length <= 3);
+        if(array[j].Length <= 3)
         size++;
     }
 
@@ -37,7 +37,7 @@ string[] GetNewArray(string[] array)
     return newArray;
 }
 
-void PrintArray(string[] inarray) // Метод вывода массива
+void PrintArray(string[] inarray) 
 {
     for (int i = 0; i  <inarray.Length; i++)
     {
@@ -46,6 +46,9 @@ void PrintArray(string[] inarray) // Метод вывода массива
 }
 
 string[] result = GetNewArray(originalArray);
+System.Console.Write("[ ");
 PrintArray(result);
+System.Console.WriteLine("]");
+
 
 
