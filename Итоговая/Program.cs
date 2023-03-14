@@ -30,3 +30,5 @@ string[] GetNewArray(string[] array)
     return str2;
 }
 
+string[] result = GetNewArray(str);
+System.Console.WriteLine(result);
