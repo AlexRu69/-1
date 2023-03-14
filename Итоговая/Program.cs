@@ -26,13 +26,6 @@ string[] GetNewArray(string[] array)
             newArray[count] = array[i];
             count++;
         }
-        // string temp = array[i];
-        // int n = temp.Length;
-        // for (int j = 0; j < str2.Length; j++)
-        // {
-        //     if (n <= 3)
-        //     str2[j] = temp;
-        // }
     }
     return newArray;
 }
