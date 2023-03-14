@@ -5,20 +5,28 @@
 Console.Clear();
 
 string[] str = { "hello", "123", "string", "5", ",.&", "homework" };
-int index = 0;
 
 
-//string[] GetArrayWhoseElementAreLessThan3Char(string[] array)
+// for (int i = 0; i < str.Length; i++)
+// {
+//     string element = str[i];
+//     int index = 0;
+//     if(element)
+// }
 
-while (index < str.Length)
+string[] GetNewArray(string[] array)
 {
-    string a = str[index];
-    if (a.Length <= 3)
+    string[] str2 = new string[0];
+    for (int i = 0; i < array.Length; i++)
     {
-        str[index] = a;
-        index++;
-        System.Console.WriteLine(str[index]);
+        string temp = array[i];
+        int n = temp.Length;
+        for (int j = 0; j < str2.Length; j++)
+        {
+            if (n <= 3)
+            str2[j] = temp;
+        }
     }
+    return str2;
 }
-
 
