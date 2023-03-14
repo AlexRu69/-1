@@ -10,7 +10,14 @@ string[] originalArray = { "hello", "123", "string", "5", ",.&", "homework" };
 
 string[] GetNewArray(string[] array)
 {
-    string[] newArray = new string[5];
+    int size = 0;
+    for (int j = 0; j < array.Length; j++)
+    {
+        if(array[j].Length <= 3);
+        size++;
+    }
+
+    string[] newArray = new string[size];
     int count = 0;
     for (int i = 0; i < array.Length; i++)
     {
